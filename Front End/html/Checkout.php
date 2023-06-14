@@ -77,6 +77,8 @@
                             include("./Payment.php");
                         }
                     ?>
+
+                    <!-- This is a New Change -->
                 </div>
             </div>
 

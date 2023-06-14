@@ -64,7 +64,7 @@
                     $_SESSION['admin_user'] = $admin_user;
                     $_SESSION['admin_id'] = $admin_id;
                     echo "<script>alert('Admin Verified')</script>";
-                    echo "<script>window.open('./index.php', '_self')</script>";
+                    echo "<script>window.open('../admin_area/', '_self')</script>";
                 }
                 else {
                     echo "<script>

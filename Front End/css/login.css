@@ -1,0 +1,171 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lora', serif;
+}
+
+/* Container */
+
+body {
+    background-color: whitesmoke;
+}
+
+/* Login Section */
+
+.page-container {
+    position: sticky;
+    top: 10vh;
+    margin-top: 10vh;
+    width: 100%;
+    min-height: 90vh;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-section {
+    align-self: flex-start;
+    top: 20%;
+}
+
+.page-container > section {
+    position: absolute;
+    min-width: 25%;
+    padding: 30px 0;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: -15px 15px 4px rgba(0, 0, 0, 0.25);
+}
+
+section > .form {
+    width: 50%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.form > .item, .signup_container > .item{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+}
+
+
+
+/* .form > .item > input, .signup_container > .item > input {
+    border-radius: 5px;
+} */
+
+.form > .item > .show-button, .signup_container > .item > .show-button {
+    margin-top: 5px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    font-size: .75rem;
+}
+
+i {
+    font-size: smaller;
+}
+
+.form > .button, .signup_container > .button {
+    cursor: pointer;
+    width: 40%;
+    padding: 5px 0;
+    background-color: #202226;
+    color: whitesmoke;
+    font-size: .9em;
+    border: 2px;
+    grid-column: span 2;
+    justify-self: center;
+}
+
+section > .signup {
+    width: 60%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}   
+
+/* Login Section */
+
+
+/* Signup Section */
+
+section > .signup_container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-auto-rows: minmax(max-content auto);
+    gap: 3vh;
+    width: 80%;
+}
+
+form > .item > p {
+    color: red;
+    font-size: .75rem;
+}
+
+
+/* Signup Section */
+
+@media (max-width: 782px) {
+    .page-container > section {
+        width: 90%;
+    }
+
+    .signcon  {
+        align-items: flex-start;
+    }
+
+    .signup_container > .item {
+        grid-column: span 2;
+    }
+}
+
+/* Container CSS */
+
+/* Footer */
+
+.footer{
+    position: fixed;
+    width: 100%;
+    height: 5vh;
+    bottom: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    background-color: #222020;
+    text-align: center;
+}
+
+.footer h1{
+    color: whitesmoke;
+}
+
+@media (max-width: 782px){
+    .footer {
+        display: none;
+    }
+    .footer h1{
+        font-size: 1.3em;
+    }
+}
+
+/* Footer */
+
+.border {
+    border: 1px solid black;
+}

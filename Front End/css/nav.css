@@ -1,0 +1,171 @@
+.nav{
+    background-color: #202226;
+    position: sticky;
+    top: 0;
+    grid-column: span 2;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 0 2vh;
+    z-index: 3;
+}
+
+/* Menu Editing */
+
+.nav-menu{
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    gap: 0px;
+    right: -100%;
+    top: 0;
+    height: 100vh;
+    width: max-content;
+    padding: 10vh 20px 20px 20px;
+    text-align: left;
+    background-color: #202226;
+    list-style: none;
+    transition: 1s;
+}
+
+.menu-items{
+    margin: 16px 0;
+}
+
+.nav-link{
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-link:hover{
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+/* Hamburger */
+
+.nav .menu-hamburger{
+    cursor: pointer;
+    width: max-content;
+    height: auto;
+    align-self: center;
+}
+
+.nav-menu.active{
+    right: 0;
+}
+
+.nav .bar{
+    display: block;
+    width: 30px;
+    height: 3px;
+    margin: 7px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;   
+    background-color: white;
+}
+
+.menu-hamburger.active .bar:nth-child(2){
+    opacity: 0;
+}
+
+.menu-hamburger.active .bar:nth-child(1){
+    transform: translateY(10px) rotate(45deg);  
+}
+
+.menu-hamburger.active .bar:nth-child(3){
+    transform: translateY(-10px) rotate(-45deg);  
+}
+
+@media (max-width: 782px){
+    .nav-link{
+        font-size: 1.5em;
+    }
+}
+
+/* Menu Editing */
+
+
+/* Nav Image */
+
+.nav .nav-logo{
+    justify-self: center;
+    align-self: center;
+    margin-left: 30px;
+}
+
+.nav-logo img{
+    height: 9vh;
+    width: auto;
+    object-position: center;
+    object-fit: contain;
+}
+
+/* Nav Image */
+
+
+/* Nav Buttons */
+
+.nav .nav-buttons{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: max-content;
+    gap: 2vw;
+}
+
+.nav-buttons .button{
+    z-index: 2;
+    cursor: pointer;
+    color: white;
+}
+
+.nav-buttons img{
+    height: 30px;
+    width: auto;
+}
+
+.button > a > .user-profile {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top center;
+}
+
+.nav-buttons > .search-section {
+    z-index: 2;
+}
+
+.nav-buttons > .search-section > form {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 5px;
+}
+
+.nav-buttons > .search-section > form > .search-bar {
+    padding: 5px 10px;
+}
+
+.nav-buttons > .search-section > form > .search-button {
+    cursor: pointer;
+    background: none;
+    outline: none;
+    color: white;
+}
+
+.nav-buttons > .cart > a {
+    text-decoration: none;
+    color: white;
+}
+
+@media (max-width: 782px) {
+    .nav-buttons > .search-section {
+        display: none;
+    }
+}
+
+/* Nav Buttons */

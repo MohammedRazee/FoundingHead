@@ -1,0 +1,140 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lora', serif;
+}
+
+.page-container{
+    min-height: 95vh;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+}
+
+/* Browsing tab section */
+
+.browser {
+    width: 20%;
+    background-color: #cccccc;
+}
+
+.browser > .browser-container{
+    position: sticky;
+    top: 10vh;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.browser-container > h2 {
+    margin-bottom: 30px;
+}
+
+.browser-container > .active{
+    font-weight: bold;
+}
+
+.browser-container > .options{
+    text-decoration: none;
+    color: black;
+    padding: 5px 30px;
+}
+
+.browser-container > .options:hover {
+    transform: scale(1.2);
+    font-weight: bolder;
+}
+
+/* Browsing tab section */
+
+/* Merch Display section */
+
+.grid-container {
+    margin: 10vh 0 5vh 0;
+    width: 80%;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-auto-rows: minmax(50vh, auto);
+    grid-row-gap: 10px;
+}
+
+.grid-container > .items {
+    border: 2px solid white;
+}
+
+.grid-container > .category-unavailable {
+    position: fixed;
+    margin-top: 5vh;
+    top: 10vh;
+    left: 35%;
+    font-size: 2rem;
+}
+
+.items > a > img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.items > a > img:hover {
+    opacity: 0.7;
+}
+
+.items > a {
+    text-decoration: none;
+    color: black;
+}
+
+.items > p{
+    font-size: 0.9rem;
+}
+
+@media (max-width: 1200px){
+    .grid-container > .items {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 600px){
+    .browser {
+        display: none;
+    }
+    .grid-container {
+        width: 100%;
+    }
+}
+
+/* Merch Display section */
+
+/* Footer */
+
+.footer{
+    width: 100%;
+    height: 5vh;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    background-color: #222020;
+    text-align: center;
+}
+
+.footer h1{
+    color: whitesmoke;
+}
+
+@media (max-width: 782px){
+    .footer h1{
+        font-size: 1.3em;
+    }
+}
+
+/* Footer */
+
+.border {
+    border: 2px solid black;
+}

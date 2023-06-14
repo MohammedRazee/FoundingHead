@@ -1,0 +1,267 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lora', serif;
+}
+
+/* Main Page */
+
+.page-container {
+    width: 100%;
+    height: 90vh;
+    margin-top: 10vh;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+
+
+
+
+/* Display Section */
+
+.product-display-container {
+    width: 40%;
+    padding: 0px 20px;
+}
+
+.product-display-container > .product-display {
+    position: sticky;
+    top: 10vh;
+    width: 100%;
+    height: 90vh;
+    padding: 20px 10% 10px 10% ;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.product-display > section {
+    width: 100%;
+    height: 90%;
+}
+
+.buy-buttons {
+    height: 10%;
+    width: 100%;
+}
+
+.buy-buttons > button {
+    cursor: pointer;
+    font-size: 2rem;
+    background-color: #202226;
+    color: whitesmoke;
+    height: 100%;
+    width: 100%;
+}
+
+button > a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+/* Display Section */
+
+
+
+
+
+
+/* Product Details */
+
+.product-details {
+    width: 40%;
+    padding: 40px 20px 20px 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    gap: 5vh;
+}
+
+.product-description > p {
+    width: 50%;
+    font-size: 0.9rem;
+}
+
+/* Info Section */
+
+.product-details > .info {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Sizes */
+
+.product-details > .sizes {
+    width: 60%;
+}
+
+.sizes > .item-size {
+    cursor: pointer;
+    font-weight: bolder;
+    background-color: white;
+    padding: 5px 10px;
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.4));
+    border: 1px solid black;
+}
+
+.sizes > .item-size:hover {
+    color: white;
+    background-color: #202226;
+}
+
+.item-size.active {
+    background-color: #202226;
+    color: white;
+}
+
+/* Price */
+
+.product-details > .price {
+    width: 40%;
+}
+
+/* Zip Code */
+.product-details > .zip-code {
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.zip-code > input {
+    text-align: center;
+    padding: 2px;
+}
+
+.zip-code > button {
+    cursor: pointer;
+    background-color: #202226;
+    color: white;
+    padding: 2px;
+}
+
+/* Info Section */
+
+/* Extras Section */
+
+.product-details > .extras {
+    display: flex;
+    flex-flow: column;
+    gap: 2vh;
+    /* margin-top: 3vh;  */
+}
+
+.extras > .more-options {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    gap: 1vh;
+}
+
+.items > a > img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.items > a > img:hover {
+    opacity: 0.7;
+}
+
+.items > a {
+    text-decoration: none;
+    color: black;
+}
+
+.items > p{
+    font-size: 0.9rem;
+}
+
+
+/* Extras Section */
+
+/* Product Details */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Browsing tab section */
+
+.browser {
+    width: 20%;
+    background-color: #cccccc;
+}
+
+.browser > .browser-container{
+    position: sticky;
+    top: 10vh;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.browser-container > h2 {
+    margin-bottom: 30px;
+}
+
+.browser-container > .active{
+    font-weight: bold;
+}
+
+.browser-container > .options{
+    text-decoration: none;
+    color: black;
+    padding: 5px 30px;
+}
+
+.browser-container > .options:hover {
+    transform: scale(1.2);
+    font-weight: bolder;
+}
+
+/* Browsing tab section */
+
+
+/* Media Queries */
+
+@media (max-width: 1200px) {
+    .browser {
+        display: none;
+    }
+}
+@media (max-width: 600px) {
+    .page-container {
+        flex-flow: column;
+    }
+
+    .product-display-container {
+        width: 100%;
+    }
+
+    .product-details {
+        width: 100%;
+    }
+
+    .product-display-container > .product-display {
+        padding: 0;
+    }
+}
+
+/* Size check */
+.border {
+    border: 1px solid black;
+}

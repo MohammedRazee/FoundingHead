@@ -1,0 +1,264 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lora', serif;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+/* Main Page */
+
+.page-container {
+    position: relative;
+    margin: 10vh 0 0 0;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5vh;
+}
+
+
+/* Cart Section */
+
+.page-container > .section {
+    display: block;
+    width: 70%;
+    position: inherit;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: space-around;
+    box-shadow: -15px 0px 4px rgba(0, 0, 0, 0.25);
+    background-color: white;
+}
+
+.page-container > .section.active {
+    display: none;
+}
+
+.page-container > .default {
+    display: none;
+}
+
+.page-container > .price-details.active {
+    display: none;
+}
+
+.page-container > .default.active {
+    display: block;
+}
+
+/* Item Section */
+
+.page-container > .section > .cart-items{
+    width: 100%;
+    height: 100%;
+    padding: 0 2vw;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-auto-rows: 30vh;
+    gap: 20px;
+}
+
+.section > .cart-items > .item{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2vw;
+}
+
+/* Image Name Section */
+
+.item > .image-name {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 30%;
+}
+
+.item > .image-name > .cart-image {
+    height: 100%;
+    width: auto;
+}
+
+.item > .image-name > .cart-image > img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    object-position: top center;
+}
+
+/* Buttons section */
+
+.item > .set-buttons {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 30px;
+}
+
+.item > .set-buttons > .move > .button {
+    cursor: pointer;
+    background-color: #202226;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+}
+
+/* Quantity Section */
+
+.cart-items > .item > .set-buttons > .quantity {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.sub, .add {
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  color: #fff;
+  background-color: #202226;
+  cursor: pointer;
+}
+
+.sub:hover, .add:hover {
+  background-color: #cccccc;
+}
+
+.quantity > .quantity-input {
+    width: 30px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    pointer-events: none;
+}
+
+/* Checkout Section */
+
+.section > .cart-checkout {
+    position: sticky;
+    bottom: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+    background-color: white;
+    color: black;
+    filter: drop-shadow(-16px -15px 10px rgba(0, 0, 0, 0.25));
+}
+
+.cart-checkout > .button {
+    padding: 10px;
+    background-color: #202226;
+    color: white;
+    cursor: pointer;
+    font-size: large;
+}
+
+.cart-checkout
+.cart-checkout > .button:hover {
+    color: #cccccc;
+}
+
+.checkout-price {
+    display: none;
+}
+
+
+/* Cart Section */
+
+
+
+
+
+
+/* Price Details */
+
+.price-details {
+    position: sticky;
+    top: 12.5vh;
+    margin-top: 2.5vh;
+    width: 20%;
+    min-height: 25vh;
+    display: grid;
+    grid-template-rows: minmax(5vh, auto);
+    grid-auto-columns: 100%;
+    gap: 1vh;
+    box-shadow: -15px 10px 4px rgba(0, 0, 0, 0.25);
+    background-color: white;
+}
+
+.price-details > .etem {
+    padding: 5px;
+
+    display: grid;
+    grid-template-columns: 60% 40%;
+    align-items: center;
+    justify-content: center;
+}
+
+.price-heading > h2{
+    grid-column: span 2;
+}
+
+.prices > p, .amount > p {
+    text-align: right;
+}
+
+
+
+
+
+/* Main Page */
+
+.border {
+    border: 2px solid black;
+}
+
+/* Viewport Management */
+
+@media (max-width: 782px) {
+    .page-container, .page-container > .section, .section > .cart-items, .item > .set-buttons > .move > .button {
+        width: 100%;
+    }
+    
+    .page-container {
+        gap: 0;
+        flex-flow: column;
+    }
+
+    .price-details {
+        margin-top: 1vh;
+        width: 100%;
+    }
+
+    .checkout-price {
+        display: block;
+    }
+
+    .item > .set-buttons {
+        flex-flow: column;
+    }
+
+    .item > .image-name {
+        width: 60%;
+        gap: 20px;
+    }
+
+    .item > .image-name > .cart-image > img {
+        object-fit: cover;
+    }
+}

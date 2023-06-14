@@ -1,0 +1,91 @@
+/* Signup Section */
+
+section {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+section > .signup_container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-auto-rows: minmax(max-content auto);
+    gap: 3vh;
+    width: 90%;
+}
+
+form > .item > p {
+    color: red;
+    font-size: .75rem;
+}
+
+.signup_container > .item{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+}
+
+i {
+    font-size: smaller;
+}
+
+.signup_container > .item > .show-button {
+    margin-top: 5px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    font-size: small;
+}
+
+.signup_container > .button {
+    cursor: pointer;
+    width: 40%;
+    padding: 5px 0;
+    background-color: #202226;
+    color: whitesmoke;
+    font-size: .9em;
+    border: 2px;
+    grid-column: span 2;
+    justify-self: center;
+}
+
+.signup_container > .button:hover {
+    color: whitesmoke;
+    background-color: #454545;
+}
+
+
+/* Orders Section */
+
+.content > .order-heading {
+    text-align: center;
+}
+.content > table, tr, td, th {
+    padding: 2px;
+    border: 1px solid black;
+    border-collapse: collapse;
+    font-size: small;
+}
+
+.content > tr, td {
+    text-align: center;
+}
+
+
+/* Signup Section */
+
+@media (max-width: 782px) {
+    section {
+        width: 90%;
+    }
+    .signup_container > .item {
+        grid-column: span 2;
+    }
+
+    .content > table, td, th {
+        font-size: smaller;
+    }
+}

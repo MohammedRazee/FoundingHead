@@ -1,0 +1,193 @@
+/* Insert Categories */
+
+.process-container {
+    min-width: 50%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 5vh;
+}
+
+.process-container > .autoloaders {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+.autoloaders > .text-field {
+    padding: 10px;
+    width: 60%;
+}
+
+.autoloaders > .submit {
+    cursor: pointer;
+    padding: 10px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #222020;
+}
+
+.autoloaders > .submit:hover {
+    color: whitesmoke;
+    background-color: #454545;
+}
+
+/* Insert Categories --- End */
+
+
+/* Add Product */
+
+.add-product {
+    padding-bottom: 50px;
+}
+
+.process-container > .product-loader {
+    width: 100%;
+    padding: 0 5vw;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 30px;
+}
+
+.product-loader > .product-data {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    gap: 5px;
+    font-size: 1.25rem;
+}
+
+.product-data > .product-input {
+    width: 70%;
+    padding: 10px 15px;
+}
+
+.product-data > select {
+    cursor: text;
+    width: 70%;
+    padding: 10px 15px;
+}
+
+.product-image > img {
+    max-height: 10vh;
+    width: auto;
+}
+
+.product-submit > input {
+    font-size: 1rem;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    padding: 15px 30px;
+    background-color: #222020;
+    color: white;
+}
+
+.product-submit > input:hover {
+    background-color: #454545;
+    color: whitesmoke;
+}
+
+/* Add Product --- End */
+
+
+/* Dispatched Orders */
+
+.dispatch-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 100%;
+}
+
+/* Left Section */
+
+.dispatch-container > .in-order > .order-items {
+    padding: 1vh 0;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-auto-rows: minmax(auto, 30vh);
+    grid-row-gap: 10px;
+}
+
+.order-items > .item {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.item > .item-image {
+    width: 30%;
+    height: 100%;
+}
+
+.item-image > img {
+    width: 100%;
+    height: 100%;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+/* Right Section */
+
+.dispatch-container > .order-details > .details {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-auto-rows: auto;
+    grid-row-gap: 10px;
+}
+
+.details > .inner {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-auto-rows: auto;
+    grid-row-gap: 5px;
+
+    border-top: 2px solid #4e4b4b;
+}
+
+.inner > .item {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item > .heading {
+    font-weight: bolder;
+    font-style: italic;
+}
+
+
+/* Viewport Adjustments */
+
+@media (max-width: 782px) {
+    .dispatch-container {
+        grid-template-rows: auto;
+        grid-row-gap: 20px;
+    }
+    .in-order, .order-details {
+        grid-column: span 2;
+    }
+
+    .in-order {
+        border-bottom: 2px solid black;
+    }
+
+    .order-details {
+        border-top: 2px solid black;
+    }
+}
+
+
+/* Dispatched Orders --- End */

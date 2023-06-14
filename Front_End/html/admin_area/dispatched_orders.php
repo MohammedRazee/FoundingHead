@@ -53,13 +53,9 @@
 
 <?php
     if(isset($_POST['del_con'])) {
-        $cancel_order = "DELETE FROM `tax_invoice` where invoice_number = $invoice";
-        $cancel_dispatch = "DELETE FROM `dispatch_address` where invoice_number = $invoice";
         $update_order_admin = "UPDATE `all_orders` set order_status = 'delivered' where invoice_number = $invoice";
         $update_order_user = "UPDATE `user_orders` set order_status = 'delivered' where invoice_number = $invoice";
 
-        $run_cancel = mysqli_query($con, $cancel_order);
-        $run_cancel_dispatch = mysqli_query($con, $cancel_dispatch);
         $run_cancel_admin = mysqli_query($con, $update_order_admin);
         $run_cancel_user = mysqli_query($con, $update_order_user);
 

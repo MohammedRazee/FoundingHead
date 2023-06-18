@@ -22,11 +22,11 @@ const rows = document.getElementById("row_value");
 let value = rows.getAttribute("data-value");
 
 if (value == 0) {
-    const empty = document.querySelector(".section");
-    empty.classList.add("active");
-    const empty1 = document.querySelector(".price-details");
-    empty1.classList.add("active");
+    const empty = document.querySelector(".section").style.display = "none";
+    // empty.classList.add("active");
+    const empty1 = document.querySelector(".price-details").style.display = "none";
+    // empty1.classList.add("active");
 
-    const fall = document.querySelector(".default");
-    fall.classList.add("active");
+    const fall = document.querySelector(".default").style.display = "block";
+    // fall.classList.add("active");
 }

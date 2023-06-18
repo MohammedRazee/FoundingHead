@@ -117,18 +117,25 @@
     position: fixed;
     bottom: 0;
     display: flex;
-    flex-flow: column;
+    flex-flow: row nowrap;
     justify-content: center;
+    align-items: center;
+    gap: 5px;
     background-color: #222020;
     text-align: center;
 }
 
-.footer h1{
+.footer > h3{
     color: whitesmoke;
 }
 
+.footer > a {
+    text-decoration: none;
+    color: white;
+}
+
 @media (max-width: 782px){
-    .footer h1{
+    .footer > h3{
         font-size: 1.3em;
     }
 }

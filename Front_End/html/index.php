@@ -102,7 +102,9 @@
             </div>
 
             <div class="footer">
-                <h1>Join Us To Be Who You Are Meant To Be</h1>
+                <h3>Developed by: </h3>
+                <a href="https://github.com/MohammedRazee/" target="_blank">@MdRazee</a>
+                <a href="https://github.com/vin23sanity" target="_blank">@VinayakPradhan</a>
             </div>
 
         </div>

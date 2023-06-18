@@ -37,13 +37,7 @@
                         $cart_count_query = "select * from `cart_details` where user_id = $user_id";
                         $counting_result = mysqli_query($con, $cart_count_query);
                         $num_rows = mysqli_num_rows($counting_result);
-                        if($num_rows == 0) {
-                            echo "<p data-value='$num_rows' id='row_value'></p>";
-                        }
-                    }
-                    else {
                         echo "<p data-value='$num_rows' id='row_value'></p>";
-                    }
                 ?>
                 <section class="section">
                     <div class="cart-items">
@@ -215,6 +209,13 @@
                     </div>
                 </div>
 
+                <?php 
+                    }
+                    else {
+                        echo "<p data-value='0' id='row_value'></p>";
+                        echo "<h1>Cart is Empty</h1>";
+                    }
+                ?>
                 <div class="default">
                     <h1>Cart is Empty</h1>
                 </div>

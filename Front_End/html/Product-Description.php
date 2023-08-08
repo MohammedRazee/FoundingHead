@@ -109,10 +109,10 @@
 
                 </div>
 
-                <div class="zip-code info">
+                <!-- <div class="zip-code info">
                     <input type="text">
                     <button type="submit">Check you Zip Code</button>
-                </div>
+                </div> -->
 
                 <div class="extras">
                     <h1>More from Founding Head</h1>

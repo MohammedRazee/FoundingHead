@@ -54,10 +54,11 @@
                 $a = $order_id;
                 $b = $quantity;
                 
-                for ($i=0; $i < $n; $i++) { 
-                    if($i % 3 == 0) {
-                        $product_id = $a % 10;
-                        $temp = $b % 10;
+                // for ($i=$n-1; $i > 0; $i--) {
+                while ($b > 1) { 
+                    // if($i % 3 == 0) {
+                        $product_id = $a % 1000;
+                        $temp = $b % 1000;
                         $noOf_items = $noOf_items + $temp;
                         
                         // Getting Product Information
@@ -81,9 +82,8 @@
             </div>
 
             <?php 
-                }
-                $a = $a / 10;
-                $b = $b / 10;
+                $a = $a / 1000;
+                $b = $b / 1000;
             }
             ?>
         </div>

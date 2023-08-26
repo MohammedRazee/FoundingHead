@@ -56,10 +56,11 @@
                 </tr>
         ';
 
-        for ($i=0; $i < $n; $i++) {
-            if($i % 3 == 0) {
-                $product_id = $a % 10;
-                $temp = $b % 10;
+        // for ($i=0; $i < $n; $i++) {
+        //     if($i % 3 == 0) {
+            while ($b > 1) {
+                $product_id = $a % 1000;
+                $temp = $b % 1000;
 
                 $get_products = "SELECT * from `products` where product_id = $product_id";
                 $get_products_query = mysqli_query($con, $get_products);
@@ -76,7 +77,9 @@
                     </tr>
                 ';
                         
-            }
+            
+            $a = $a / 1000;
+            $b = $b / 1000;
         }
 
         $output .= '

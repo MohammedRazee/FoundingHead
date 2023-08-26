@@ -57,7 +57,7 @@
     padding: 5px;
     display: grid;
     grid-template-columns: repeat(4, 25%);
-    grid-auto-rows: minmax(50vh, auto);
+    grid-auto-rows: minmax(auto, 50vh);
     grid-row-gap: 10px;
 }
 

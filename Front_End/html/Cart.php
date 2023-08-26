@@ -28,7 +28,7 @@
             searchElse();
         ?>
 
-        <form class="" method="post">
+        <form method="post">
             <div class="page-container">
                 <?php 
                     $num_rows = 0;
@@ -60,10 +60,15 @@
                                 // Manipulating for order_id
                                 $length = strlen((string) $product_id);
                                 $x = 3 - $length;
+                                $y = strlen((string) $quantity);
+                                $z = 3 - $length;
                                 while ($x > 0) {
                                     $order_id = $order_id . 0;
-                                    $order_quan = $order_quan . 0;
                                     $x--;
+                                }
+                                while ($z > 0) {
+                                    $order_quan = $order_quan . 0;
+                                    $z--;
                                 }
                                 $order_id = $order_id . $product_id;
                                 $order_quan = $order_quan . $quantity;
